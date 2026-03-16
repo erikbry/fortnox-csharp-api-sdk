@@ -10,4 +10,4 @@ internal class SearchRequest<TEntity> : BaseRequest
         Method = HttpMethod.Get;
     }
     public BaseSearch SearchSettings { get; set; }
-}
+} 

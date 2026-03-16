@@ -31,6 +31,8 @@ internal static class Endpoints
     public const string Expenses = $"/{Version}/expenses";
     public const string FinancialYears = $"/{Version}/financialyears";
 
+    public const string InboundDelivery = $"/api/warehouse/deliveries-v1/inbounddeliveries";
+    public const string OutboundDelivery = $"/api/warehouse/deliveries-v1/outbounddeliveries";
     public const string Inbox = $"/{Version}/inbox";
     public const string InvoiceAccruals = $"/{Version}/invoiceaccruals";
     public const string Invoices = $"/{Version}/invoices";

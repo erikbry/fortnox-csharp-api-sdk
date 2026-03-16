@@ -102,6 +102,8 @@ public class FortnoxClient
     public IExpenseConnector ExpenseConnector => Get<ExpenseConnector>();
     public IFinancialYearConnector FinancialYearConnector => Get<FinancialYearConnector>();
     public IArchiveConnector InboxConnector => Get<InboxConnector>(); //Note: Uses same interface as ArchiveConnector
+    public IInboundDeliveryConnector InboundDeliveryConnector => Get<InboundDeliveryConnector>();
+    public IOutboundDeliveryConnector OutboundDeliveryConnector => Get<OutboundDeliveryConnector>();
     public IInvoiceAccrualConnector InvoiceAccrualConnector => Get<InvoiceAccrualConnector>();
     public IInvoiceConnector InvoiceConnector => Get<InvoiceConnector>();
     public IInvoiceFileConnectionConnector InvoiceFileConnectionConnector => Get<InvoiceFileConnectionConnector>();
