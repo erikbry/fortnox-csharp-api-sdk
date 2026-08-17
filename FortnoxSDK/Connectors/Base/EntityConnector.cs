@@ -71,6 +71,18 @@ internal abstract class EntityConnector<TEntity> : BaseConnector where TEntity :
         return await SendAsync(request).ConfigureAwait(false);
     }
 
+    protected async Task BaseUpdateNoData(params string[] indices)
+    {
+        var request = new BaseRequest()
+        {
+            Endpoint = Endpoint,
+            Indices = indices.ToList(),
+            Method = HttpMethod.Put
+        };
+
+        await SendAsync(request).ConfigureAwait(false);
+    }
+
     protected async Task BaseDelete(params string[] indices)
     {
         var request = new BaseRequest()

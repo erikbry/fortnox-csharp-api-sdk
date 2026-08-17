@@ -7,66 +7,68 @@ namespace Fortnox.SDK.Entities;
 public class OutboundDeliveryRow
 {
     ///<summary> Code of the cost center for the row. </summary>
-    [JsonProperty]
+    [JsonProperty("costCenterCode")]
     public string CostCenterCode { get; set; }
 
     ///<summary> Delivered quantity. </summary>
-    [JsonProperty]
+    [JsonProperty("deliveredQuantity")]
     public decimal DeliveredQuantity { get; set; }
 
     ///<summary> Forced quantity. </summary>
-    [JsonProperty]
+    [JsonProperty("forcedQuantity")]
     public decimal ForcedQuantity { get; set; }
 
     ///<summary> Item description. </summary>
-    [JsonProperty]
+    [JsonProperty("itemDescription")]
     public string ItemDescription { get; set; }
 
     ///<summary> Item ID. </summary>
-    [JsonProperty]
+    [JsonProperty("itemId")]
     public string ItemId { get; set; }
 
     ///<summary> Item unit. </summary>
-    [JsonProperty]
+    [JsonProperty("itemUnit")]
     public string ItemUnit { get; set; }
 
     ///<summary> Code of the project for the row. </summary>
-    [JsonProperty]
+    [JsonProperty("projectId")]
     public string ProjectId { get; set; }
 
     ///<summary> Quantity of the item. </summary>
-    [JsonProperty]
+    [JsonProperty("quantity")]
     public decimal Quantity { get; set; }
 
     ///<summary> Reserved quantity. </summary>
-    [JsonProperty]
+    [JsonProperty("reservedQuantity")]
     public decimal ReservedQuantity { get; set; }
 
     ///<summary> Row ID for updating specific row. </summary>
-    [JsonProperty]
+    [JsonProperty("rowId")]
     public long RowId { get; set; }
 
     ///<summary> Stock location code. </summary>
-    [JsonProperty]
+    [JsonProperty("stockLocationCode")]
     public string StockLocationCode { get; set; }
 
     ///<summary> Stock location ID. </summary>
-    [JsonProperty]
+    [JsonProperty("stockLocationId")]
     public string StockLocationId { get; set; }
 
     ///<summary> Stock location name. </summary>
-    [JsonProperty]
+    [JsonProperty("stockLocationName")]
     public string StockLocationName { get; set; }
 
     ///<summary> Stock point code. </summary>
-    [JsonProperty]
-    public string StockPointCode { get; set; }
+    [ReadOnly]
+    [JsonProperty("stockPointCode")]
+    public string StockPointCode { get; private set; }
 
     ///<summary> Stock point ID. </summary>
-    [JsonProperty]
+    [JsonProperty("stockPointId")]
     public string StockPointId { get; set; }
 
     ///<summary> Stock point name. </summary>
-    [JsonProperty]
-    public string StockPointName { get; set; }
+    [ReadOnly]
+    [JsonProperty("stockPointName")]
+    public string StockPointName { get; private set; }
 }

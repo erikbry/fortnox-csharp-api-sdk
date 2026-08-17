@@ -81,9 +81,9 @@ public abstract class BaseSearch
             if (string.IsNullOrWhiteSpace(strValue)) continue;
 
             var searchAttribute = property.GetAttribute<SearchParameter>();
-            var paramName = searchAttribute.Name ?? property.Name;
+            var paramName = searchAttribute.Name ?? property.Name.ToLower(); // Keep case for custom parameters
 
-            searchParams.Add(paramName.ToLower(), strValue);
+            searchParams.Add(paramName, strValue);
         }
 
         searchParams.AddRange(CustomParameters);

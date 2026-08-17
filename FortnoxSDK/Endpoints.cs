@@ -6,6 +6,8 @@ internal static class Endpoints
     /// Fortnox API version.
     /// </summary>
     public const string Version = "3";
+    public const string Warehouse = "api/warehouse";
+    public const string FileAttachments = "api/fileattachments";
 
     public const string AbsenceTransactions = $"/{Version}/absencetransactions";
     public const string AccountCharts = $"/{Version}/accountcharts";
@@ -31,12 +33,12 @@ internal static class Endpoints
     public const string Expenses = $"/{Version}/expenses";
     public const string FinancialYears = $"/{Version}/financialyears";
 
-    public const string InboundDelivery = $"/api/warehouse/deliveries-v1/inbounddeliveries";
-    public const string OutboundDelivery = $"/api/warehouse/deliveries-v1/outbounddeliveries";
+    public const string InboundDelivery = $"/{Warehouse}/deliveries-v1/inbounddeliveries";
+    public const string OutboundDelivery = $"/{Warehouse}/deliveries-v1/outbounddeliveries";
     public const string Inbox = $"/{Version}/inbox";
     public const string InvoiceAccruals = $"/{Version}/invoiceaccruals";
     public const string Invoices = $"/{Version}/invoices";
-    public const string InvoiceFileConnections = "/api/fileattachments/attachments-v1";
+    public const string InvoiceFileConnections = $"/{FileAttachments}/attachments-v1";
     public const string InvoicePayments = $"/{Version}/invoicepayments";
 
     public const string Labels = $"/{Version}/labels";
@@ -55,8 +57,8 @@ internal static class Endpoints
     public const string SalaryTransactions = $"/{Version}/salarytransactions";
     public const string ScheduleTimes = $"/{Version}/scheduletimes";
     public const string SIE = $"/{Version}/sie";
-    public const string StockBalance = "/api/warehouse/status-v1/stockbalance";
-    public const string StockPoints = "/api/warehouse/stockpoints-v1";
+    public const string StockBalance = $"/{Warehouse}/status-v1/stockbalance";
+    public const string StockPoints = $"/{Warehouse}/stockpoints-v1";
     public const string Suppliers = $"/{Version}/suppliers";
     public const string SupplierInvoiceAcrruals = $"/{Version}/supplierinvoiceaccruals";
     public const string SupplierInvoices = $"/{Version}/supplierinvoices";
@@ -80,7 +82,7 @@ internal static class Endpoints
 
     public const string Profile = $"/{Version}/me";
 
-    public const string Tenant = "/api/warehouse/tenants-v4";
+    public const string Tenant = "/{WarehouseApi}/tenants-v4";
 
     public const string CustomerReferences = $"/{Version}/customerreferences";
 }

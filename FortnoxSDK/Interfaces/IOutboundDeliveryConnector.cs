@@ -15,5 +15,6 @@ public interface IOutboundDeliveryConnector : IEntityConnector
     Task<OutboundDelivery> GetAsync(long id);
     Task<OutboundDelivery> CreateAsync(OutboundDelivery outboundDelivery);
     Task<OutboundDelivery> UpdateAsync(OutboundDelivery outboundDelivery);
+    Task ReleaseAsync(long id);
     Task DeleteAsync(long id);
 }

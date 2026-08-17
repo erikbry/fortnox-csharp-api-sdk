@@ -15,6 +15,7 @@ public interface IInboundDeliveryConnector : IEntityConnector
     Task<InboundDelivery> GetAsync(long id);
     Task<InboundDelivery> CreateAsync(InboundDelivery inboundDelivery);
     Task<InboundDelivery> UpdateAsync(InboundDelivery inboundDelivery);
+    Task ReleaseAsync(long id);
     Task DeleteAsync(long id);
 
 }

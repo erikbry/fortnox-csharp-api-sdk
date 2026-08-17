@@ -56,6 +56,11 @@ internal class InboundDeliveryConnector : EntityConnector<InboundDelivery>, IInb
         return await SendAsync(request).ConfigureAwait(false);
     }
 
+    public Task ReleaseAsync(long id)
+    {
+        return BaseUpdateNoData(id.ToString(), "release");
+    }
+
     public Task DeleteAsync(long id)
     {
         return BaseDelete(id.ToString());

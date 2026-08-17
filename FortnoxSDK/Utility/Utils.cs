@@ -26,6 +26,11 @@ public static class Utils
             return ((DateTime)value).ToString(ApiConstants.DateAndTimeFormat);
         }
 
+        if (type.IsArray)
+        {
+            return string.Join(",", (object[]) value);
+        }
+
         return value.ToString().ToLower();
     }
 

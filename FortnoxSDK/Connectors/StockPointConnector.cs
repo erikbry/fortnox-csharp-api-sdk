@@ -6,14 +6,20 @@ using Fortnox.SDK.Entities;
 using Fortnox.SDK.Interfaces;
 using Fortnox.SDK.Requests;
 using Fortnox.SDK.Utility;
+using Fortnox.SDK.Search;
 
 namespace Fortnox.SDK.Connectors;
 
-internal class StockPointConnector : EntityConnector<StockPoint>, IStockPointConnector
+internal class StockPointConnector : SearchableWarehouseEntityConnector<StockPoint, StockPoint, StockPointSearch>, IStockPointConnector
 {
     public StockPointConnector()
     {
         Endpoint = Endpoints.StockPoints;
+    }
+
+    public async Task<EntityCollection<StockPoint>> FindAsync(StockPointSearch searchSettings)
+    {
+        return await BaseFind(searchSettings).ConfigureAwait(false);
     }
 
     public Task<IList<StockPoint>> QueryAsync(string codeOrName = null, StockPointState state = StockPointState.All)
